@@ -4,7 +4,7 @@
 使用方法：
 
 ```
-python ProtectionSearch.py -i app.apk
+python3 ProtectionSearch.py -i app.apk
 ```
 
 默认使用tools内的aapt(windows、linux)，若需指定可使用-t 参数

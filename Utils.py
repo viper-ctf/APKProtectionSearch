@@ -6,7 +6,9 @@ import sys
 try:
     import configparser
 except Exception as e:
-    print("module is't installed,please used 'pip install configparser' commmond to install it")
+    print(
+        "module is't installed,please used 'pip install configparser' commmond to install it"
+    )
 
 
 # 返回当前脚本的全路径，末尾不带\
@@ -40,10 +42,10 @@ def getparent(filepath):
 # 创建多级目录，比如c:\\test1\\test2,如果test1 test2都不存在，都将被创建
 def create_dirs(to_create_path):
     path_create = to_create_path
-    if os.sep == '\\':
-        path_create = path_create.replace('/', os.sep)
+    if os.sep == "\\":
+        path_create = path_create.replace("/", os.sep)
     dirs = path_create.split(os.sep)
-    path = ''
+    path = ""
     for dir in dirs:
         dir += os.sep
         path = os.path.join(path, dir)
@@ -63,4 +65,3 @@ def delete_file(to_del_file):
         return True
     else:
         return False
-
